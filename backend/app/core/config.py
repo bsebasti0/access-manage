@@ -1,7 +1,7 @@
-from pydantic_settings import BaseSettings, SettingConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class	Settings(BaseSettings):
-	model_config = SettingConfigDict(env_file = ".venv", extra = "ignore")
+	model_config = SettingsConfigDict(env_file = ".venv", extra = "ignore")
 
 	DATABASE_URL: str = "sqlite:///./access_manager.db"
 	SECRET_KEY: str = "Palavra Chave"
