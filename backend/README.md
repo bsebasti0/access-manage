@@ -4,8 +4,8 @@ instalação das dependencias adicionais
 
 creação do banco de dados   ./app/api/core
 
-creação dos models    ./app/api/models
-
+creação dos models    ./app/models
+Criação  dos schemas   ./app/schemas
 
 atualizar banco de dados usando alembic
 configurar o algo do banco de dados  ./alembic/env.py

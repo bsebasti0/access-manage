@@ -2,12 +2,12 @@ from datetime import datetime
 
 from pydantic import BaseModel, ConfigDict, FailFast, Field, EmailStr
 
+from app.models.enum import UserRole
+
 
 class	UserCreate(BaseModel):
-	email: EmailStr = Field(
-		min_length = 1,
-		max_length = 100
-	)
+	email: EmailStr
+
 	nome: str = Field(
 		min_length = 1,
 		max_length = 100
@@ -17,6 +17,8 @@ class	UserCreate(BaseModel):
 		min_length = 8,
 		max_length = 100
 	)
+
+	role: UserRole = UserRole.User
 
 class	UserResponse(BaseModel):
 	id: int

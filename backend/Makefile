@@ -1,7 +1,6 @@
-.PHONY: install run dev test freeze clean
 
 install:
-	pip install -r requirements.txt
+	.venv/bin/pip install -r requirements.txt
 
 run:
 	uvicorn app.main:app
@@ -18,3 +17,5 @@ freeze:
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
+
+.PHONY: install run dev test freeze clean
