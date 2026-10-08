@@ -20,6 +20,13 @@ class	Controllers(Base):
 		index = True
 	)
 
+	owner_id: Mapped[int] = mapped_column(
+		Integer,
+		ForeignKey("tb_users.id", ondelete="RESTRICT"),
+		nullable=False,
+		index=True
+	)
+
 	name: Mapped[str] = mapped_column(
 		String(100),
 		nullable = False
