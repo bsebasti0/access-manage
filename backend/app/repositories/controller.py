@@ -22,7 +22,7 @@ class	ControllerRepository:
 			.first()
 		)
 
-	def	selve(self, control: Controllers) -> Controllers:
+	def	save(self, control: Controllers) -> Controllers:
 		self.db.commit()
 		self.db.refresh()
 		return (control)
